@@ -1,5 +1,6 @@
 import 'package:delivery_boy_app/provider/current_location_provider.dart';
 import 'package:delivery_boy_app/utils/utils.dart';
+import 'package:delivery_boy_app/widgets/order_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
@@ -77,7 +78,7 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
               if(locationprovider.errorMessage.isEmpty)
               //show order at bottom
               Align(alignment: Alignment.bottomCenter,
-              child: Padding(padding: EdgeInsets.all(15),child: Text("Hello"),),
+              child: Padding(padding: EdgeInsets.all(15),child: OrderCard()),
               ),
               //static online at button
               Align(alignment: Alignment.topCenter,

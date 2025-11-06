@@ -1,5 +1,7 @@
+import 'package:delivery_boy_app/routes.dart';
 import 'package:delivery_boy_app/utils/colors.dart';
 import 'package:delivery_boy_app/utils/image_urls.dart';
+import 'package:delivery_boy_app/widgets/cutom_button.dart';
 import 'package:delivery_boy_app/widgets/dash_vertical_line.dart';
 import 'package:flutter/material.dart';
 
@@ -103,8 +105,36 @@ class OrderCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(width: 4)
+                    SizedBox(width: 4),
+                    pickUpDeliveryinfo(
+                        "Pickup - ",
+                        "Kollam Paravur - 1.2 km away from you",
+                        "Green Valley Coconut Store")
                   ],
+                ),
+                //Delivery
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.location_on_outlined,
+                      color: buttonMainColor,
+                      size: 22,
+                    ),
+                    SizedBox(width: 5),
+                    pickUpDeliveryinfo("Delivery - ",
+                        "Thaju Baith Pozhikara -3.5 km awayfrom you", "Muhsin ")
+                  ],
+                ),
+                SizedBox(height: 15),
+                //action buttons
+                SizedBox(
+                  width: double.maxFinite,
+                  child: CustomButton(
+                      title: "View Order details",
+                      onPressed: () {
+                        // NavigationHelper.push(context, screen);
+                      }),
                 )
               ],
             ),
@@ -118,7 +148,24 @@ class OrderCard extends StatelessWidget {
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        
+        children: [
+          Text(
+            title,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+          ),
+          Text(
+            address,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+          ),
+          Text(
+            subtitle,
+            style: TextStyle(color: Colors.black38),
+          )
+        ],
       ),
     );
   }
