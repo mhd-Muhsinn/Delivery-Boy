@@ -64,36 +64,37 @@ The current implementation uses **predefined LatLng points** to simulate a deliv
 ---
 
 ## 📁 Project Structure
- lib/
- │
- ├── models/
- │ └── order_model.dart
- │
- ├── provider/
- │ ├── current_location_provider.dart
- │ └── delivery_provider.dart
- │
- ├── screen/
- │ ├── app_main_screen.dart
- │ ├── delivery_map_screen.dart 
- │ ├── driver_home_screen.dart
- │ └── order_detail_screen.dart
- │
- ├── utils/
- │ ├── colors.dart
- │ ├── image_urls.dart
- │ └── utils.dart
- │ 
- ├── widgets/
- │ ├── custom_button.dart
- │ ├── order_on_the_way.dart
- │ ├── order_card.dart 
- │ └── dash_vertical_line.dart
- │
- ├── google_map.dart
- ├── main.dart
- └── routes.dart
 
+```
+  lib/
+  │
+  ├── models/
+  │ └── order_model.dart
+  │
+  ├── provider/
+  │ ├── current_location_provider.dart
+  │ └── delivery_provider.dart
+  │
+  ├── screen/
+  │ ├── app_main_screen.dart
+  │ ├── delivery_map_screen.dart 
+  │ ├── driver_home_screen.dart
+  │ └── order_detail_screen.dart
+  │
+  ├── utils/
+  │ ├── colors.dart
+  │ ├── image_urls.dart
+  │ └── utils.dart
+  │ 
+  ├── widgets/
+  │ ├── custom_button.dart
+  │ ├── order_on_the_way.dart
+  │  ├── order_card.dart 
+  │ └── dash_vertical_line.dart
+  │
+  ├── google_map.dart
+  ├── main.dart
+  └── routes.dart
 ---
 
 ## 🧰 Tech Stack
