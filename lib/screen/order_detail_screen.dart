@@ -1,8 +1,11 @@
 import 'dart:math';
 
 import 'package:delivery_boy_app/provider/delivery_provider.dart';
+import 'package:delivery_boy_app/routes.dart';
+import 'package:delivery_boy_app/screen/delivery_map_screen.dart';
 import 'package:delivery_boy_app/utils/colors.dart';
 import 'package:delivery_boy_app/utils/image_urls.dart';
+import 'package:delivery_boy_app/utils/utils.dart';
 import 'package:delivery_boy_app/widgets/cutom_button.dart';
 import 'package:delivery_boy_app/widgets/dash_vertical_line.dart';
 import 'package:flutter/material.dart';
@@ -264,29 +267,46 @@ class OrderDetailScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Consumer<DeliveryProvider>(builder: (context, provider, child) {
+      bottomNavigationBar:
+          Consumer<DeliveryProvider>(builder: (context, provider, child) {
         return Container(
             color: Colors.white,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: CustomButton(
-                      color: declineOrder,
-                    title: "Decline Order",
-                    textColor: Colors.black54,
-                    onPressed: () {},
-                  )),
-                  SizedBox(width: 10),
-                   Expanded(
-                    child: CustomButton(
-                    title: "Accept Order",
-                    onPressed: () {},
-                  )),
-                   
-                ],
-              ),
+              child: provider.status == DeliveryStatus.orderAccepted
+                  ? CustomButton(
+                      title: "Start Pickup",
+                      onPressed: () {
+                        //move delivery boy to pickup location and naviagte to map
+                        context.read<DeliveryProvider>().startPickup();
+                        NavigationHelper.pushReplacement(context, DeliveryMapScreen());
+                      })
+                  : Row(
+                      children: [
+                        Expanded(
+                            child: CustomButton(
+                          color: declineOrder,
+                          title: "Decline Order",
+                          textColor: Colors.black54,
+                          onPressed: () {
+                            context.read<DeliveryProvider>().rejectOrder();
+                            Navigator.pop(context);
+                            showAppSnackbar(
+                                context: context,
+                                type: SnackbarType.error,
+                                description: "Order is not accepted");
+                          },
+                        )),
+                        SizedBox(width: 10),
+                        Expanded(
+                            child: CustomButton(
+                          title: "Accept Order",
+                          onPressed: () {
+                            context.read<DeliveryProvider>().acceptOrder();
+                          },
+                        )),
+                      ],
+                    ),
             ));
       }),
     );

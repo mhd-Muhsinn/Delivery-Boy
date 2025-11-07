@@ -148,14 +148,14 @@ class DeliveryProvider extends ChangeNotifier {
     //green marker for pickup location
     _markers.add(Marker(
         markerId: MarkerId("pickup"),
-        position: _currentOrder!.pickupLocation,
+        position: _currentOrder?.pickupLocation ?? LatLng(0.00, 0.00),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
         infoWindow: InfoWindow(title: "Pickup location")));
 
     //red maker for delivery location
     _markers.add(Marker(
         markerId: MarkerId("delivery"),
-        position: _currentOrder!.deliveryLocation,
+        position: _currentOrder?.deliveryLocation ??  LatLng(0.00, 0.00),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
         infoWindow: InfoWindow(title: "Delivery location")));
 
