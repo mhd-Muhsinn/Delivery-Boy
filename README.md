@@ -51,10 +51,10 @@ The current implementation uses **predefined LatLng points** to simulate a deliv
 ## 🗺️ Screenshots
 
 <p align="center">
-  <img src="screenshots/home.jpg" width="230" alt="Accept/Decline Order" />
-  <img src="screenshots/orderdetail.jpg" width="230" alt="Order Details" />
-  <img src="screenshots/orderontheway.jpg" width="230" alt="Delivery Map" />
-  <img src="screenshots/deliverycomplete.jpg" width="230" alt="Delivery Completed" />
+  <img src="screenshots/home.jpg" width="200" alt="Accept/Decline Order" />
+  <img src="screenshots/orderdetail.jpg" width="200" alt="Order Details" />
+  <img src="screenshots/orderontheway.jpg" width="200" alt="Delivery Map" />
+  <img src="screenshots/deliverycomplete.jpg" width="200" alt="Delivery Completed" />
 </p>
 
 <p align="center">
