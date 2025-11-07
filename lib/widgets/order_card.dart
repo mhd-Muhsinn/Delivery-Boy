@@ -1,4 +1,5 @@
 import 'package:delivery_boy_app/routes.dart';
+import 'package:delivery_boy_app/screen/order_detail_screen.dart';
 import 'package:delivery_boy_app/utils/colors.dart';
 import 'package:delivery_boy_app/utils/image_urls.dart';
 import 'package:delivery_boy_app/widgets/cutom_button.dart';
@@ -133,7 +134,7 @@ class OrderCard extends StatelessWidget {
                   child: CustomButton(
                       title: "View Order details",
                       onPressed: () {
-                        // NavigationHelper.push(context, screen);
+                        NavigationHelper.push(context, OrderDetailScreen());
                       }),
                 )
               ],
