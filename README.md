@@ -50,11 +50,64 @@ The current implementation uses **predefined LatLng points** to simulate a deliv
 
 ## 🗺️ Screenshots
 
-| Accept/Decline Order | Delivery Map | Delivery Completed |
-|:---------------------:|:-------------:|:------------------:|
-| ![Order Card](screenshots/home.jpg) | ![Map Screen](screenshots/screen2.png) | ![Delivery Completed](screenshots/screen3.png) |
+<p align="center">
+  <img src="screenshots/home.jpg" width="230" alt="Accept/Decline Order" />
+  <img src="screenshots/orderdetail.jpg" width="230" alt="Order Details" />
+  <img src="screenshots/orderontheway.jpg" width="230" alt="Delivery Map" />
+  <img src="screenshots/deliverycomplete.jpg" width="230" alt="Delivery Completed" />
+</p>
+
+<p align="center">
+  <em>Accept/Decline Order • Order Details • Delivery Map • Delivery Completed</em>
+</p>
 
 ---
 
 ## 📁 Project Structure
+ lib/
+ │
+ ├── models/
+ │ └── order_model.dart
+ │
+ ├── provider/
+ │ ├── current_location_provider.dart
+ │ └── delivery_provider.dart
+ │
+ ├── screen/
+ │ ├── app_main_screen.dart
+ │ ├── delivery_map_screen.dart 
+ │ ├── driver_home_screen.dart
+ │ └── order_detail_screen.dart
+ │
+ ├── utils/
+ │ ├── colors.dart
+ │ ├── image_urls.dart
+ │ └── utils.dart
+ │ 
+ ├── widgets/
+ │ ├── custom_button.dart
+ │ ├── order_on_the_way.dart
+ │ ├── order_card.dart 
+ │ └── dash_vertical_line.dart
+ │
+ ├── google_map.dart
+ ├── main.dart
+ └── routes.dart
+
+---
+
+## 🧰 Tech Stack
+
+| Component | Technology |
+|------------|-------------|
+| Framework | Flutter |
+| Language | Dart |
+| State Management | Provider |
+| Maps Integration | Google Maps Flutter |
+| Location Services | Geolocator |
+| Route Simulation | Flutter Polyline Points |
+| UI | Material Design |
+
+---
+
 
