@@ -1,7 +1,7 @@
 # 🚴‍♂️ Delivery Boy App
 
 A **Flutter-based Delivery App** that allows delivery partners to manage orders, track progress, and simulate real-time delivery routes using **Google Maps**.  
-This project demonstrates the full delivery workflow — from **order acceptance** to **successful delivery completion** — with smooth UI transitions and animated route visualization.
+This project demonstrates the full delivery workflow  from **order acceptance** to **successful delivery completion**  with smooth UI transitions and animated route visualization.
 
 ---
 
@@ -52,7 +52,7 @@ The current implementation uses **predefined LatLng points** to simulate a deliv
 
 | Accept/Decline Order | Delivery Map | Delivery Completed |
 |:---------------------:|:-------------:|:------------------:|
-| ![Order Card](screenshots/screen1.png) | ![Map Screen](screenshots/screen2.png) | ![Delivery Completed](screenshots/screen3.png) |
+| ![Order Card](screenshots/home.jpg) | ![Map Screen](screenshots/screen2.png) | ![Delivery Completed](screenshots/screen3.png) |
 
 ---
 
